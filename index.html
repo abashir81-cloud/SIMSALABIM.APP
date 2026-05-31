@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMSALABIM – Solusi Cepat Pesan Produk & Jasa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+        .bg-vibrant-green { background: linear-gradient(135deg, #22c55e, #16a34a); }
+    </style>
+</head>
+<body class="bg-emerald-50 text-slate-800 font-sans">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-emerald-600 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
+            <div class="text-2xl font-bold text-white cursor-pointer tracking-wider">SIMSALABIM</div>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-12 px-4 max-w-4xl mx-auto">
+        <!-- Hero Section -->
+        <div id="page-home" class="text-center mb-16">
+            <h1 class="text-5xl font-extrabold text-emerald-900 mb-6">SIMSALABIM</h1>
+            <p class="text-xl text-emerald-700 mb-8 font-medium">Tinggal Request, Kami Siap Bantu!</p>
+            
+            <!-- Karakter Animasi (Ilustrasi) -->
+            <div class="flex justify-center gap-4 mb-8">
+                <div class="w-24 h-24 bg-emerald-200 rounded-full flex items-center justify-center animate-float">👦 Baju Koko</div>
+                <div class="w-24 h-24 bg-emerald-200 rounded-full flex items-center justify-center animate-float" style="animation-delay: 0.5s;">🧕 Jilbab</div>
+            </div>
+
+            <button onclick="showPage('order')" class="px-8 py-4 bg-emerald-600 text-white rounded-2xl font-bold hover:bg-emerald-700 transition shadow-xl transform hover:scale-105 duration-300">Pesan Sekarang</button>
+
+            <!-- Smartphone 3D Premium -->
+            <div class="my-16 flex justify-center animate-float">
+                <div class="relative w-64 h-96 rounded-[3rem] border-8 border-emerald-900 bg-gradient-to-br from-emerald-400 to-emerald-700 shadow-2xl flex items-center justify-center p-4">
+                    <div class="text-white text-center">
+                        <span class="text-6xl mb-4 block">✨</span>
+                        <p class="font-bold text-lg tracking-widest uppercase">SIMSALABIM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Page -->
+        <div id="page-order" class="hidden bg-white p-8 rounded-3xl shadow-2xl border border-emerald-100">
+            <h2 class="text-3xl font-bold mb-8 text-emerald-900 text-center">Formulir Pesanan</h2>
+            <form id="orderForm" class="space-y-6">
+                <div class="space-y-2">
+                    <label class="text-sm font-semibold text-emerald-800">Nama Pemesan</label>
+                    <input required id="name" class="w-full p-4 rounded-xl border border-emerald-200 focus:ring-4 focus:ring-emerald-100 outline-none" placeholder="Contoh: Budi Santoso">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-sm font-semibold text-emerald-800">Nomor WhatsApp</label>
+                    <input required id="wa" type="tel" class="w-full p-4 rounded-xl border border-emerald-200 focus:ring-4 focus:ring-emerald-100 outline-none" placeholder="Contoh: 08123456789">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-sm font-semibold text-emerald-800">Kategori Layanan</label>
+                    <select id="category" class="w-full p-4 rounded-xl border border-emerald-200 focus:ring-4 focus:ring-emerald-100 outline-none">
+                        <option value="Desain Grafis">Desain Grafis</option>
+                        <option value="Pembuatan Website">Pembuatan Website</option>
+                        <option value="Pengetikan">Pengetikan</option>
+                        <option value="Pendidikan, Privat & Pelatihan">Pendidikan, Privat & Pelatihan</option>
+                        <option value="AI & Teknologi (Aplikasi AI, Alat-alat Komputer/Laptop, dll)">AI & Teknologi (Aplikasi AI, Alat-alat Komputer/Laptop, dll)</option>
+                        <option value="Percetakan">Percetakan</option>
+                        <option value="Produk Digital (E-book (buku elektronik))">Produk Digital (E-book (buku elektronik))</option>
+                        <option value="Simpan Pinjam Koperasi Syari'ah">Simpan Pinjam Koperasi Syari'ah</option>
+                        <option value="Makanan dan Minuman">Makanan dan Minuman</option>
+                        <option value="Fundraising Penggalangan Dana (Donasi Infak Pembangunan Lantai 2 Madrasah Diniyah MDTU RBMI)">Fundraising Penggalangan Dana (Donasi Infak Pembangunan Lantai 2 Madrasah Diniyah MDTU RBMI)</option>
+                        <option value="Produk Fisik (Buku, Iqro, Juz’ama, dll)">Produk Fisik (Buku, Iqro, Juz’ama, dll)</option>
+                        <option value="Fashion (Baju , Jilbab, Tas, Sepatu dan Sandal)">Fashion (Baju , Jilbab, Tas, Sepatu dan Sandal)</option>
+                        <option value="Ibadah Umroh & Haji">Ibadah Umroh & Haji</option>
+                        <option value="Sembako">Sembako</option>
+                        <option value="Layanan Kurir (Layanan Kirim Paket)">Layanan Kurir (Layanan Kirim Paket)</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-sm font-semibold text-emerald-800">Deskripsi Kebutuhan</label>
+                    <textarea required id="desc" rows="4" class="w-full p-4 rounded-xl border border-emerald-200 focus:ring-4 focus:ring-emerald-100 outline-none"></textarea>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-sm font-semibold text-emerald-800">Lokasi</label>
+                    <input required id="location" class="w-full p-4 rounded-xl border border-emerald-200 focus:ring-4 focus:ring-emerald-100 outline-none" placeholder="Kota atau alamat">
+                </div>
+                <button type="submit" class="w-full py-4 bg-emerald-600 text-white rounded-xl font-bold hover:bg-emerald-700 transition">Kirim Pesanan via WhatsApp</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function showPage(page) {
+            document.getElementById('page-home').classList.toggle('hidden', page !== 'home');
+            document.getElementById('page-order').classList.toggle('hidden', page !== 'order');
+        }
+
+        document.getElementById('orderForm').onsubmit = function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const wa = document.getElementById('wa').value;
+            const cat = document.getElementById('category').value;
+            const desc = document.getElementById('desc').value;
+            const loc = document.getElementById('location').value;
+            const msg = `Halo Admin SIMSALABIM, saya ${name}. Ingin pesan ${cat}. Permintaan: ${desc}. Lokasi: ${loc}`;
+            window.open(`https://wa.me/6285692085114?text=${encodeURIComponent(msg)}`, '_blank');
+        };
+    </script>
+</body>
+</html>
